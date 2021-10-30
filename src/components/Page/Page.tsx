@@ -39,7 +39,7 @@ export const Page = ({ children, withBackButton = false, title }: PageProps) => 
       <Box height="100vh" w="100%" padding="2rem 1rem 1rem 2rem">
         {title && (
           <Box maxW="xl" pb={4} display="flex">
-            <Heading fontWeight="400" color="white" as="h1" fontSize="2rem">
+            <Heading fontWeight="500" color="white" as="h1" fontSize="2rem">
               {title}
             </Heading>
           </Box>
