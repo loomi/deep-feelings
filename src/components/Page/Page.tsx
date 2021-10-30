@@ -3,6 +3,7 @@ import { ReactNode, useEffect, useRef } from 'react';
 import { IoIosArrowBack } from 'react-icons/io';
 import { useLocation, useNavigate } from 'react-router-dom';
 
+import background from '@/assets/background.svg';
 import { MotionBox } from '@/components/common/MotionBox';
 import { Head } from '@/components/Head';
 
@@ -35,30 +36,33 @@ export const Page = ({ children, withBackButton = false, title }: PageProps) => 
 
   return (
     <MotionBox bg="#5b79a6" width="100%" variants={container} initial="hidden" animate="show">
-      <Head title={title} />
-      <Box height="100vh" w="100%" padding="2rem 1rem 1rem 2rem">
-        {title && (
-          <Box maxW="xl" pb={4} display="flex">
-            <Heading fontWeight="500" color="white" as="h1" fontSize="2rem">
-              {title}
-            </Heading>
-          </Box>
+      <Box display="flex">
+        <Box width="12rem" backgroundColor="white" backgroundImage={background} />
+        <Head title={title} />
+        <Box height="100vh" w="100%" padding="2rem 1rem 1rem 2rem">
+          {title && (
+            <Box maxW="xl" pb={4} display="flex">
+              <Heading fontWeight="500" color="white" as="h1" fontSize="2rem">
+                {title}
+              </Heading>
+            </Box>
+          )}
+          <Box>{children}</Box>
+        </Box>
+        {withBackButton && (
+          <Button
+            position="absolute"
+            top="2rem"
+            left="2rem"
+            zIndex="1000"
+            leftIcon={<IoIosArrowBack />}
+            variant="primaryLighter"
+            onClick={() => navigate(-1)}
+          >
+            Voltar
+          </Button>
         )}
-        <Box>{children}</Box>
       </Box>
-      {withBackButton && (
-        <Button
-          position="absolute"
-          top="2rem"
-          left="2rem"
-          zIndex="1000"
-          leftIcon={<IoIosArrowBack />}
-          variant="primaryLighter"
-          onClick={() => navigate(-1)}
-        >
-          Voltar
-        </Button>
-      )}
     </MotionBox>
   );
 };
