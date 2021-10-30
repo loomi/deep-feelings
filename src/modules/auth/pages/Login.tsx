@@ -7,7 +7,7 @@ export const Login = () => {
   const toast = useToast();
 
   return (
-    <AuthLayout title="Log in to your account">
+    <AuthLayout title="DeepFeelings">
       <LoginForm
         onSuccess={() =>
           toast({

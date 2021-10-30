@@ -16,7 +16,7 @@ export const AuthLayout = ({ children, title, subtitle }: AuthLayoutProps) => {
       <LC.Vertical center position="relative" w="100%" minH="100vh" py="5%">
         <Container maxW="container.md">
           {title && (
-            <Heading as="h1" fontSize="4xl" mb={8} textTransform="uppercase" textAlign="center">
+            <Heading as="h1" fontSize="4xl" mb={8} textAlign="center" color="brand.600">
               {title}
             </Heading>
           )}
@@ -26,16 +26,7 @@ export const AuthLayout = ({ children, title, subtitle }: AuthLayoutProps) => {
             </Text>
           )}
 
-          <LC.Vertical
-            center
-            w="60%"
-            bg="white"
-            mx="auto"
-            py={8}
-            px={12}
-            borderRadius="lg"
-            boxShadow="md"
-          >
+          <LC.Vertical center w="60%" bg="white" mx="auto" py={8} px={12} borderRadius="lg">
             {children}
           </LC.Vertical>
         </Container>
