@@ -1,4 +1,4 @@
-# Deep feelings 🚀👨‍🚀
+# Deep feelings
 
 <p style="font-size: 13px;font-style: italic;">Powered by <a href="https://github.com/loomi">Loomi</a> Developers.</p>
 
