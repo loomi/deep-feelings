@@ -37,7 +37,7 @@ export const Page = ({ children, withBackButton = false, title }: PageProps) => 
   return (
     <MotionBox bg="#5b79a6" width="100%" variants={container} initial="hidden" animate="show">
       <Box display="flex">
-        <Box width="12rem" backgroundColor="white" backgroundImage={background} />
+        <Box width="12rem" backgroundColor="white" backgroundImage={background} color="white"></Box>
         <Head title={title} />
         <Box height="100vh" w="100%" padding="2rem 1rem 1rem 2rem">
           {title && (
