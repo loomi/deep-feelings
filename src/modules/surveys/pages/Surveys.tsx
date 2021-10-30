@@ -1,3 +1,5 @@
+import { SurveysTable } from '../components/SurveysTable';
+
 import { FilterSelect } from '@/components/common/FilterSelect';
 import * as LC from '@/components/LC';
 import { Page } from '@/components/Page';
@@ -9,6 +11,7 @@ export const Surveys = () => {
         <Searchbar placeholder="Pesquisar..." />
         <FilterSelect title="Time" queryParam="team" />
       </LC.Horizontal>
+      <SurveysTable />
     </Page>
   );
 };
