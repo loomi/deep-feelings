@@ -31,6 +31,7 @@ export const LoginForm = ({ onSuccess, onError }: LoginFormProps) => {
         }
       }}
       validationSchema={schema}
+      withDebugger
     >
       {() => (
         <LC.Vertical w="100%">
